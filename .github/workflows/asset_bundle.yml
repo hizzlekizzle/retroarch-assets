@@ -16,7 +16,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - run: 7z a -mx=9 assets.7z glui menu_widgets nxrgui ozone pkg rgui sounds switch xmb 
+    - uses: actions/checkout@v2
+    - run: rm -rf branding wallpaper/* src .git configure Makefile COPYING
+    - run: 7z a -mx=9 assets.7z *
     - name: Upload assets bundle
       uses: svenstaro/upload-release-action@v2
       with:
