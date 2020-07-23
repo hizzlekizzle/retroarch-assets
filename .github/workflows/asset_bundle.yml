@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - run: rm -rf branding wallapper/* .git
+    - run: rm -rf branding wallpaper/* .git
     - run: 7z a -mx=9 assets.7z *
     - name: Upload assets bundle
       uses: svenstaro/upload-release-action@v2
