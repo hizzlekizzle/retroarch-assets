@@ -17,7 +17,7 @@ jobs:
 
     steps:
     - run: rm -rf branding wallapper/* .git
-    - run 7z a -mx=9 assets.7z *
+    - run: 7z a -mx=9 assets.7z *
     - name: Upload assets bundle
       uses: svenstaro/upload-release-action@v2
       with:
